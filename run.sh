@@ -41,6 +41,8 @@ cp $dataset_dir/$config $pipeline_config_path
 #    python ./object_detection/eval.py --checkpoint_dir=$checkpoint_dir --eval_dir=$eval_dir --pipeline_config_path=$pipeline_config_path
 #done
 
+python ./object_detection/train.py --train_dir=$train_dir --pipeline_config_path=$pipeline_config_path
+python ./object_detection/eval.py --checkpoint_dir=$checkpoint_dir --eval_dir=$eval_dir --pipeline_config_path=$pipeline_config_path
 
 
 # 导出模型
