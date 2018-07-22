@@ -32,6 +32,9 @@ do
     echo "############" $i "runnning #################"
     last=$[$i*100]
     current=$[($i+1)*100]
+    
+    echo "s/^  num_steps: $last/  num_steps: $current/g" $pipeline_config_path
+    
     sed -i "s/^  num_steps: $last/  num_steps: $current/g" $pipeline_config_path  # 通过num_steps控制一次训练最多100step
 
     echo "############" $i "training #################"
